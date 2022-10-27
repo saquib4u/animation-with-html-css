@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    background: url('/game-with-html-and-css/sky.jpg');
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.town{
+    background-image: url('/game-with-html-and-css/city.png') ;
+    position: absolute;
+    width: 500%;
+    height: 250px;
+    /* top: 50%; */
+    bottom: 100px;
+    display:block;
+ z-index: 1;
+ background-repeat: repeat-x;
+ animation: town 20s linear infinite  ;
+}
+.road{
+    background-image: url('/game-with-html-and-css/road.jpg');
+    position: absolute;
+    width: 500%;
+    height: 100px;
+    display: block;
+    bottom: 0;
+    left: 0;
+    animation: road 5s linear infinite backwards;
+
+}
+.carwheel{
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    
+}
+.van{
+    width: 50%;
+    position: relative;
+    /* bottom: 50%; */
+    z-index: 5;
+    animation: van 2s linear infinite;
+}
+.wheel{
+  width: 10%;
+  position: absolute;
+  bottom: 60%;
+  animation: wheel 1s linear infinite;
+}
+.one{
+    position: absolute;
+    bottom:4%;
+    left: 4%;
+    /* z-index: 6; */
+}
+.two{
+    position: absolute;
+    bottom:4%;
+    left: 35%;
+    /* z-index: 6; */
+}
+
+
+
+
+
+
+/* now keyframe  */
+@keyframes van{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+} 
+
+@keyframes wheel 
+{
+  50%{
+        transform: rotate(3600deg);
+    }
+}
+@keyframes town{
+    100%{
+        transform: translateX(-1000px);
+    }
+}
+@keyframes road{
+    100%{
+        transform: translateX(-1000px);
+    }
+}
